@@ -28,7 +28,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
     $body = array("msisdn"=>$msisdn);
     $body = json_encode($body);
     $ctl = strlen($body);
-    $header = array("Host:bonstri.tri.co.id" ,
+    $header = array("Host:bima.tri.co.id/home-detail/490/SFH-30GB" ,
  "Connection:keep-alive" ,
  "Content-Length:" . $ctl ,
  "Accept:application/json, text/plain, */*" ,
@@ -46,25 +46,25 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
   {
     $body = "grant_type".'='."password".'&'."username".'=' . $msisdn . '&'."password".'='.$otp;
     $ctl = strlen($body);
-    $header = array("Host:bonstri.tri.co.id" ,
+    $header = array("Host:bima.tri.co.id/home-detail/490/SFH-30GB" ,
  "Connection:keep-alive" ,
  "Content-Length:" . $ctl ,
  "Accept:application/json, text/plain, */*" ,
- "Origin:http://bonstri.tri.co.id" ,
+ "Origin:http://bima.tri.co.id/home-detail/490/SFH-30GB" ,
  "Authorization:Basic Ym9uc3RyaTpib25zdHJpc2VjcmV0" ,
  "User-Agent:Mozilla/5.0 (Linux; Android 9; Redmi Note 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36" ,
  "Content-Type:application/x-www-form-urlencoded" ,
- "Referer:http://bonstri.tri.co.id/login?returnUrl=%2Fhome" ,
+ "Referer:http://bima.tri.co.id/home-detail/490/SFH-30GB" ,
  "Accept-Encoding:gzip, deflate" ,
  "Accept-Language:id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7");
-    $response = $this->curls('http://bonstri.tri.co.id/api/v1/login/validate-otp',$header,$body,'POST');
+    $response = $this->curls('http://bima.tri.co.id/api/v1/login/validate-otp',$header,$body,'POST');
     return $response[1];
   }
   
   function trans($bearer)
   {
     $body = '{}';
-    $header = array("Host:bonstri.tri.co.id" ,
+    $header = array("Host:bima.tri.co.id/home-detail/490/SFH-30GB" ,
  "Connection:keep-alive" ,
  "Content-Length:2" ,
  "Accept:application/json, text/plain, */*" ,
@@ -75,7 +75,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
  "Referer:http://bonstri.tri.co.id/voucherku" ,
  "Accept-Encoding:gzip, deflate" ,
  "Accept-Language:id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7");
-   $response = $this->curls("http://bonstri.tri.co.id/api/v1/voucherku/voucher-history",$header,$body,"POST");
+   $response = $this->curls("http://bima.tri.co.id/home-detail/490/SFH-30GB",$header,$body,"POST");
    return $response[1];
    
   }
@@ -85,7 +85,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
     $body = array("rewardId"=>$id1,"rewardTransactionId"=>$id);
     $body = json_encode($body);
     $ctl = strlen($body);
-    $header = array("Host:bonstri.tri.co.id" ,
+    $header = array("Host:bima.tri.co.id/home-detail/490/SFH-30GB" ,
  "Connection:keep-alive" ,
  "Content-Length:" . $ctl ,
  "Accept:application/json, text/plain, */*" ,
@@ -96,7 +96,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
  "Referer:http://bonstri.tri.co.id/voucherku" ,
  "Accept-Encoding:gzip, deflate" ,
  "Accept-Language:id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7");
-     $response = $this->curls("http://bonstri.tri.co.id/api/v1/voucherku/get-voucher-code",$header,$body,"POST");
+     $response = $this->curls("http://bima.tri.co.id/home-detail/490/SFH-30GB",$header,$body,"POST");
      return $response[1];
   }
   
